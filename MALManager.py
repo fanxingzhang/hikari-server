@@ -1,5 +1,16 @@
 import requests
 import xml.etree.ElementTree as ET
+import pymysql
+
+host = 'hikaridb.c9umgfyeannc.us-east-2.rds.amazonaws.com'
+port = 3306
+dbname = 'hikariDB'
+user = 'UeusugiErii'
+password = "SayonaraSensei123"
+
+
+conn = pymysql.connect(host, user=user,port=port, passwd=password, db=dbname)
+
 
 class Anime:
     def __init__(self, animeId):
